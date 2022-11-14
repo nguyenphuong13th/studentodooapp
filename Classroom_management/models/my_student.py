@@ -3,7 +3,7 @@ from odoo import api, fields, models, tools, _
 from odoo.exceptions import UserError, ValidationError
 
 class MyStudent(models.Model):
-    _name = "my.student"
+    _name = "my.student"# name must be in lowercase or will have Value error after fixing restart service odoo to make change
     _description = "My student model"
 
     name = fields.Char('Student Name', required=True) #Char: text 1 dòng
