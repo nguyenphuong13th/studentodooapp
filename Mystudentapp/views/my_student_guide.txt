@@ -1,0 +1,24 @@
+Đăng ký Menu @ menuitem:
+id (unique), name là tên tự đặt
+action link đến một act_window có id như đặc tả (action_my_student)
+sequence là thứ tự ưu tiên của menu (priority), giá trị càng nhỏ thì độ ưu tiên càng cao, nhiều menu thì sequence nhỏ sẽ được đứng trước
+groups mô tả group user nào có quyền thấy menu này.
+
+Đăng ký action @ record id="action_my_student"
+name là tên tự đặt
+res_model ref đến tên model
+view_ids mình ref đến tree view và form view.
+
+Đăng ký tree view @ record id="my_student_tree_view":
+Trong Odoo gọi là tree view nhưng ta có thể hiểu nó là "list view"
+name là tên tự đặt
+model ref đến tên model
+Thẻ tree ta có đặc tả default_order="create_date desc" tức sẽ show list sắp xếp record theo thứ tự giảm dần ngày tạo (mới -> cũ)
+Bên trong chứa các field, name của field sẽ link / reference đến các field trong model my.student đã tạo trong @ mystudent/models/my_student.py
+
+Đăng ký form view @ record id="my_student_form_view":
+name là tên tự đặt
+model ref đến tên model
+Bên trong form ta có thể tạo các group
+Các field có name cũng reference đến các trường trong model
+Ngoài ra, thuộc tính của thẻ field ta cũng có thể dùng widget để nó render theo chủ đích mong muốn. Odoo có nhiều widget built-in mà ta có thể dùng ngay hoặc tự mình customize. Lưu ý, widget cũng phải phù hợp với field type đã đặc tả trong model.

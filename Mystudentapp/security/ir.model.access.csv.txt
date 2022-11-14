@@ -1,4 +1,4 @@
 Cột id và name: tên tự đặt, convention thường là access_TÊN_MODEL. _TÊN_MODEL thường được encode bằng cách replace dấu chấm thành shift gạch. Ví dụ: "my.pet" -> "my_pet", "sale.order.line" thành "sale_order_line".
-Cột model_id: có format model_TÊN_MODEL.
-Cột group_id:id - trong Odoo sẽ có một số group người dùng đã được định nghĩa sẵn (built-in) hoặc bạn tự định nghĩa thêm. Trong cột này mình để ID của group user này. Format là TÊN_MODULE.TÊN_GROUP. Code trên mình dùng là "base.group_user", tức trong module "base" Odoo đã có định nghĩa một group "group_user" này rồi.
+Cột model_id: có format model_tên_model.
+Cột group_id:ID - trong Odoo sẽ có một số group người dùng đã được định nghĩa sẵn (built-in) hoặc bạn tự định nghĩa thêm. Trong cột này mình để ID của group user này. Format là TÊN_MODULE.TÊN_GROUP. Code trên mình dùng là "base.group_user", tức trong module "base" Odoo đã có định nghĩa một group "group_user" này rồi.
 Cột perm_read, perm_write, perm_create, perm_unlink: cho phép ta đặc tả permission có quyền đọc, ghi, tạo, xóa hay không. Giá trị 1 là quyền, 0 là không có quyền. Để đơn giản, mình kích hết là 1 luôn
