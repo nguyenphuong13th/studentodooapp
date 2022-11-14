@@ -3,7 +3,7 @@ from odoo import api, fields, models, tools, _
 from odoo.exceptions import UserError, ValidationError
 
 class MyStudent(models.Model):
-    _name = "my.Student"
+    _name = "my.student"
     _description = "My student model"
 
     name = fields.Char('Student Name', required=True) #Char: text 1 dòng
