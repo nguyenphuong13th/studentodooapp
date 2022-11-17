@@ -17,9 +17,9 @@ class MyStudent(models.Model):
         ('female', 'Female')
     ], string='Gender', default='male')#Selection: chọn lựa, option
     student_image = fields.Binary("Student Image", attachment=True, help="Student Image")#Binary: lưu ảnh
-    owner_id = fields.Many2one('res.partner', string='Owner')#Many2one: quan hệ nhiều một: N-1
+    owner_id = fields.Many2one('res.partner', string='Owner')#Many2one: quan hệ nhiều một tới đối tượng khác: N-1
     product_ids = fields.Many2many(comodel_name='product.product',
                                 string="Related Products",
                                 relation='student_product_rel',
                                 column1='col_student_id',
-                                column2='col_product_id')#quan hệ nhiều nhiều: N-N
+                                column2='col_product_id')#quan hệ nhiều nhiều tới đối tượng khác: N-N
